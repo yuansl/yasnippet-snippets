@@ -10,15 +10,15 @@ func Test${1:Feature}(t *testing.T) {
 	cases := []struct {
 	      name     string
 	      disable  bool
-	      input    interface{}
-	      expected interface{}
-	      exec     func(input interface{}) interface{}
+	      input    any
+	      expected any
+	      exec     func(input any) any
 	}{
 		{
 			name: "test case for ...",
 			input: nil,
 			expected: nil,
-			exec: func(input interface{}) interface{} {
+			exec: func(input any) any {
 			      return nil
 			},
 		},

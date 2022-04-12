@@ -15,7 +15,7 @@ func Test${1:Feature}(t *testing.T) {
 	      exec     func(input any) any
 	}{
 		{
-			name: "test case for ...",
+			name: \`test case for ...\`,
 			input: nil,
 			expected: nil,
 			exec: func(input any) any {

@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: fatal
+# key: fatal
+# contributor : @yuansl
+# --
+func fatal(format string, v ...any) {
+	fmt.Fprintf(os.Stderr, "fatal error"+format, v...)
+	os.Exit(1)
+}

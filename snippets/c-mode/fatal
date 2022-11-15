@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name: fatal
+# key: fatal
+# --
+static void fatal(const char *fmt, ...)
+{
+	va_list ap;
+
+	va_start(ap, fmt);
+	fputs("fatal error:", stderr);
+	vfprintf(stderr, fmt, ap);
+	va_end(ap);
+	exit(1);
+}

@@ -31,6 +31,7 @@ func Test${1:Feature}(t *testing.T) {
 
 	    test := c
 	    t.Run(test.name, func(t *testing.T) {
+	        t.Parallel()
 	        got := test.exec(test.input)
 		if got != test.expected {
 		   t.Fatalf("expected: \`%v\`, got: \`%v\`\n", test.expected, got)

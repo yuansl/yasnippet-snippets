@@ -3,7 +3,7 @@
 # key: fatal
 # contributor : @yuansl
 # --
-func fatal(format string, v ...any) {
-     fmt.Fprintf(os.Stderr, "fatal error: "+format, v...)
+func fatal(v ...any) {
+     fmt.Fprintln(os.Stderr, "fatal error: ", v)
      os.Exit(1)
 }

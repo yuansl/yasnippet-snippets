@@ -8,6 +8,6 @@ func fatalf(format string, v ...any) {
      fn := runtime.FuncForPC(pc)
 
      fmt.Fprintf(os.Stderr, "fatal error: "+format, v...)
-     fmt.Fprintf(os.Stderr, "\t as %s:%s:%d\n", fn.Name(), file, line)
+     fmt.Fprintf(os.Stderr, "%s:\n\t%s:%d\n", fn.Name(), file, line)
      os.Exit(1)
 }
